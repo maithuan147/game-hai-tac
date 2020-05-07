@@ -1,0 +1,195 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+// @font-face {
+//     font-family: 'tahoma';
+//     src: url('../fonts/tahoma.eot');
+//     src: url('../fonts/tahoma.eot?#iefix') format('eot'),
+//          url('../fonts/tahoma.woff') format('woff'),
+//          url('../fonts/tahoma.ttf') format('truetype'),
+//          url('../fonts/tahoma.svg') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+@font-face {
+  font-family: 'utm_god';
+  src: url('../fonts/UTM_Gods_WordR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'utm_god_bold';
+  src: url('../fonts/utm-god-s-wordbold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'tahoma';
+  src: url('../fonts/Tahoma_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* =Reset default browser CSS.
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img{border: 0;}
+figure{margin:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+/* -------------------------------------------------------------- */
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:hover, a:focus, a:hover p, select:hover, select:focus, select:active{
+    text-decoration: none;
+    outline: none !important;
+}
+a, a:link{
+    text-decoration: none;
+    outline: none !important;
+    color: #fff;
+}
+
+.clearfix{
+    &:after {
+        content: "";
+        visibility: hidden;
+        display: table; 
+        clear: both;
+    }
+}
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #585757; 
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #585757; 
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #585757; 
+} 
+
+*, .box_sizing_border_box {
+  box-sizing: border-box;
+}
+
+.a100 {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.t-upper {
+  text-transform: uppercase;
+}
+
+.t-center {
+  text-align: center;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+
+.img-res {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.c-green {
+  color: #42ff00;
+}
+.c-yellow {
+  color: #fff000;
+}
+.c-brown {
+  color: #693c03;
+}
+
+.bb-double {
+  // border-width:2px;  
+  border-bottom-style:double;
+}
+
+.t-shadow-gray {
+  text-shadow: 0px 2px 2px #888888;
+}
+.t-shadow-brown {
+  text-shadow: -1px -1px 0 #472409, 1px -1px 0 #472409, -1px 1px 0 #472409, 1px 1px 0 #472409;
+}
+.t-shadow-red {
+  text-shadow: -1px -1px 0 #732602, 2px -1px 0 #732602, -1px 2px 0 #732602, 2px 2px 0 #732602;
+}
+.t-shadow-yellow {
+  text-shadow: -1px -1px 0 #857764, 2px -1px 0 #857764, -1px 2px 0 #857764, 2px 2px 0 #857764;
+}
+.t-shadow-black {
+  text-shadow: -1px -1px 0 #211918, 2px -1px 0 #211918, -1px 2px 0 #211918, 2px 2px 0 #211918;
+}
+.t-shadow-red-orange {
+  text-shadow: -1px -1px 0 #a11004, 3px -1px 0 #a11004, -1px 3px 0 #a11004, 3px 3px 0 #a11004;
+}
+
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}

@@ -1,0 +1,6 @@
+.main-content {
+	@include devices(1024) {
+    margin-top: 75px;
+  }
+	
+}

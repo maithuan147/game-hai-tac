@@ -1,0 +1,109 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+html {
+    // @include max_devices(999) {
+        // overflow-x: hidden !important;
+    // }
+    
+}
+body {
+    margin: 0;
+    font-family: "utm_god_bold";
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: $color_white;
+    background-color: #1b1a18  !important;
+    min-height: 100vh;
+    // height: 2000px;
+    // overflow: hidden;
+    // background: $bg, $bg-noi;
+    background-position: center top, center top;
+    @include max_devices(1023) {
+        // background:transparent;
+        // background: $bg-1024;
+        // background-size: 100% auto;
+        // background-position: center top, center bottom, center center;
+    }
+    @include max_devices(991) {
+    }
+    @include max_devices(768) {
+    }
+    @include max_devices(750) {
+        // background-position: center 60px, center bottom, center center;
+    }
+    @include max_devices(680) {
+        // background-size: 680px auto;
+    }
+    @include max_devices(667) {
+        // background-size: 667px auto;
+    }
+    @include max_devices(640) {
+        // background: $m-bg, $m-bg-noi;
+        background-position: center top, center top;
+        background-size: 100% auto;
+    }
+    // @include max_devices(568) {
+    //     background-size: 568px auto;
+    // }
+    // @include max_devices(480) {
+    //     background-size: 480px auto;
+    // }
+    // @include max_devices(414) {
+    //     background-size: 414px auto;
+    // }
+    // @include max_devices(375) {
+    //     background-size: 375px auto;
+    // }
+    // @include max_devices(360) {
+    //     background-size: 360px auto;
+    // }
+    // @include max_devices(320) {
+    //     background-size: 320px auto;
+        
+    // }
+}
+.container {
+    position: relative;
+	width: 100%;
+	margin: 0 auto;
+    @include devices(1155) {
+        width: 1155px;
+    }
+}
+
+
+
+.hidden-mobile {
+    @include max_devices(1023) {
+        display: none !important;
+    }
+}
+.hidden-pc {
+    @include devices(1024) {
+        display: none !important;
+    }
+}
+
+
+
+
+
+// partials
+@import "partials/header";
+@import "partials/footer";
+
+
+// components
+@import "components/one_year";
+
+
+
+
+
+// contents
+// @import "contents/lichsu_quay";
+
+@import "_typo.scss";
+

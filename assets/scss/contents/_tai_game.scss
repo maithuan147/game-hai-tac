@@ -1,0 +1,300 @@
+body {
+	&.download-page {
+		background: $m-bg-tai-game;
+    background-size: cover;
+    background-position: center top;
+    @include devices(1024) {
+    	height: 1069px;
+	    background: $bg-tai-game;
+	    background-position: center top;
+	  }
+
+	  .title-section {
+	  	margin-top: 35px;
+	  }
+	}
+}
+.box-download-page {
+
+}
+.head-download {
+
+}
+
+.logo-download-page {
+	text-align: center;
+  margin-top: 10px;
+  @include devices(1024) {
+    text-align: left;
+    float: left;
+  }
+	img {
+    width: 90px;
+    @include devices(768) {
+	    width: 159px;
+	  }
+	}
+}
+
+.link-head-download {
+  margin-top: 23px;
+	float: right;
+	a {
+		display: inline-block;
+		width: 51px;
+		height: 51px;
+		margin: 0 5px;
+		background: $bg-icon-nav-left left top;
+		&:hover {
+			background-position: right top;
+		}
+		&.link-fanpage-download {
+			background-position: left -51px;
+			&:hover {
+				background-position: right -51px;
+			}
+		}
+		&.link-message-download {
+			background-position: left -102px;
+			&:hover {
+				background-position: right -102px;
+			}
+		}
+	}
+}
+
+
+.download-info {
+	position: relative;
+	background: $m-bg-main-tai-game center center;
+	background-size: 100% 100%;
+  width: 97%;
+  margin: 65px auto 0;
+  color: #595a5a;
+  @include devices(360) {
+    margin-top: 75px;
+  }
+  @include devices(375) {
+    margin-top: 85px;
+  }
+  @include devices(414) {
+    margin-top: 100px;
+  }
+  @include devices(480) {
+    margin-top: 125px;
+    width: 465px;
+  }
+  @include devices(600) {
+    margin-top: 140px;
+  }
+  @include devices(640) {
+    margin-top: 155px;
+  }
+  @include devices(768) {
+    width: 698px;
+    height: 226px;
+    margin-top: 225px;
+  }
+  @include devices(1024) {
+    width: 882px;
+    margin-top: 100px;
+  }
+}
+.icon-game-download, .info-game-download, .link-device-download {
+	float: left;
+}
+.icon-game-download {
+	width: 80px;
+	background: $bg-behind-icon-game-download center top;
+  background-size: cover;
+	height: 122px;
+	margin-left: 15px;
+	position: relative;
+	@include devices(768) {
+    width: 162px;
+    height: 230px;
+    margin-left: 30px;
+  }
+	&:before {
+		position: absolute;
+		content: '';
+		background: $canh-hoa-tai-game center center;
+		background-size: contain;
+		width: 200px;
+		height: 50px;
+    top: -36px;
+    left: -10px;
+    @include devices(768) {
+      width: 311px;
+	    height: 98px;
+	    top: -70px;
+	    left: 34px;
+	  }	
+	}
+	img {
+    width: 90%;
+    margin-top: 22px;
+    margin-left: 3px;
+    @include devices(768) {
+      margin-top: 35px;
+    	margin-left: 8px;
+	  }
+	}
+}
+
+.info-game-download {
+  margin-left: 5px;
+  margin-top: 10px;
+  float: right;
+  width: calc(100% - 105px);
+  @include devices(768) {
+    margin-left: 5px;
+    margin-top: 25px;
+    width: calc(100% - 210px);
+  }
+  @include devices(1024) {
+    margin-left: 20px;
+    width: 375px;
+    float: left;
+  }
+  .txt-info-1 {
+  	font-size: 16px;
+  	margin-bottom: 5px;
+  	@include devices(375) {
+      font-size: 19px;
+    }
+    @include devices(768) {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+  }
+  .star-download {
+  	display: inline-block;
+  	width: 30px;
+  	height: 31px;
+  	background: $icon-star center center;
+  	background-size: contain;
+  	margin: 0 2px;
+  	@include devices(768) {
+      width: 43px;
+      height: 41px;
+    }
+  }
+  .line-info-game {
+  	height: 1px;
+  	width: 100%;
+  	margin-top: 5px;
+  	background: #595a5a;
+  	@include devices(768) {
+      margin-top: 15px;
+    }
+  }
+  .txt-info-2 {
+  	margin: 10px 0;
+  	font-weight: 500;
+  	@include devices(768) {
+  		font-size: 15px;
+  		margin: 15px 0;
+    }
+  }
+}
+
+.link-device-download {
+  margin-left: 80px;
+  margin-top: 35px;
+	a {
+		width: 173px;
+		height: 75px;
+		display: block;
+		background: $bg-btn-tai-download left top;
+		font-size: 16px;
+		color: #783c30;
+		position: relative;
+		line-height: 63px;
+		margin: 5px 0;
+		&:hover {
+			background-position: right top;
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			width: 22px;
+			height: 28px;
+			background: $icon-apple-download center center;
+			left: 12px;
+	    top: 16px;
+		}
+		&.link-device-android {
+			padding-left: 25px;
+			&:before {
+				width: 24px;
+				background: $icon-android-download center center;
+			}
+		}
+	}
+}
+
+.btn-cai-dat-download {
+	background: $bg-btn-cai-dat-download center center;
+  background-size: cover;
+  width: 300px;
+  height: 74px;
+  line-height: 70px;
+  margin: 25px auto 0; 
+  @include devices(360) {
+		margin-top: 35px;
+  }
+  @include devices(480) {
+		width: 418px;
+  	height: 103px;
+  	line-height: 100px;
+  } 
+	a {
+		font-size: 30px;
+		color: #783c30;
+	}
+}
+
+.btn-guide-download {
+	@include devices(360) {
+		margin-top: 20px;
+  }
+  @include devices(1024) {
+		background: $bg-link-guide-download center center;
+		width: 882px;
+		height: 118px;
+		margin: 25px auto;
+  }
+  
+	ul {
+		text-align: center;
+		li {
+			display: inline-block;
+			width: 300px;
+			height: 60px;
+			line-height: 60px;
+			background: $bg-guide-download center center;
+			background-size: 100% 100%;
+			@include devices(480) {
+				width: 410px;
+		  	height: 95px;
+		  	line-height: 95px;
+		  }
+		  @include devices(1024) {
+				width: 266px;
+		  	height: 61px;
+		  	line-height: 61px;
+  	    margin: 30px 12px 0;
+		  }
+		  &:nth-child(1) {
+		  	@include devices(1024) {
+					margin-left: 270px;
+			  }
+		  }
+			&:hover {
+				background: $bg-guide-download-hover center center;
+				background-size: 100% 100%;
+			}
+		}
+	}
+}

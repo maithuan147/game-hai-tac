@@ -1,0 +1,35 @@
+.header{
+    position: absolute;
+    z-index: 1;
+    left: 17%;
+    top: 10px;
+    text-align: center;
+    .page{
+        font-family: "tahoma";
+        font-size: 15px;
+        margin-left: -15px;
+    }
+    .dowload-game{
+        font-size: 21px;
+        background: url(../images/bt-taigame.png) no-repeat center;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        width: 168px;
+        margin-top: 10px;
+        span{
+            background-image: linear-gradient(to top, #ffa927 0%, #ffffff 40%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: -2px;
+        }
+        &:hover{
+            background: url(../images/hover-bt-taigame.png) no-repeat center;
+            span{
+                background-image: linear-gradient(to top, #aa1500 0%, #d98250 100%);
+            }
+        }
+    }
+}

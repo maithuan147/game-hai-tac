@@ -1,0 +1,963 @@
+#inputCopy::selection {
+    background: #ffba00;
+}
+#inputCopy::-webkit-selection {
+    background: #ffba00;
+}
+#inputCopy::-moz-selection {
+    background: #ffba00;
+}
+.t-center{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-lg-3{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.mt-28{
+    margin-top: 28px;
+}
+.mt-48{
+    margin-top: 48px;
+}
+.mt-39{
+    margin-top: 39px;
+}
+.pb-43{
+    padding-bottom: 43px;
+}
+.px-30{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pb-165{
+    padding-bottom: 165px !important;
+}
+.pb-63{
+    padding-bottom: 63px !important;
+}
+.container-1000{
+    max-width: 1000px;
+    margin: auto;
+}
+section{
+    padding: 0 15px;
+}
+main{
+    position: relative;
+}
+.img-exit{
+    position: absolute;
+    top: -12px;
+    right: -40px;
+    cursor: pointer;
+    &::before{
+        @include transformSkew(45deg);
+    }
+    &::after{
+        @include transformSkew(-45deg);
+    }
+    &::before, &::after{
+        content: "";
+        height: 50px;
+        width: 12px;
+        background: #3791dd;
+        position: absolute;
+    }
+}
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #282828, $alpha: 0.85);
+    z-index: -100;
+    opacity: 0;
+    @include transition(0.3s);
+    &.show{
+        z-index: 100;
+        opacity: 1;  
+    }
+}
+#inputCopy{
+    background: #5f80a1;
+    width: 100%;
+    border: none;
+    padding: 15px 86px 15px 15px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "tahoma";
+    font-weight: bold;
+    letter-spacing: 1.7px;
+}
+#copy{
+    background: #375066;
+    padding: 15px 19px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "tahoma";
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.ps-re{
+    position: relative;
+}
+.one-year{
+    background: $bg no-repeat center;
+    height: 1080px;
+    background-size: cover;
+    position: relative;
+    .one-year-img{
+        position: absolute;
+        left: 50%;
+        @include transformX(-50%);
+        bottom: 50px;
+        max-width: 100%;
+    }
+    .btn-one-year{
+        position: absolute;
+        left: 50%;
+        @include transformX(-50%);
+        bottom: 30px;
+        max-width: 1120px;
+        width: 100%;
+        display: flex;
+    }
+    .btn-one-year{
+        a{
+            max-width: 360px;
+            flex: 0 0 360px;
+            margin-left: 10px;
+            margin-right: 10px;
+            -ms-flex: 0 0 33.334%;
+            background: url(../images/btn-one-year.png) no-repeat center;
+            height: 82px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            font-family: "utm_god_bold";
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            @include transition(0.1s);
+            span{
+                background-image: linear-gradient(to top,#30b5e8 0%,#ffffff 45%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                position: relative;
+                z-index: 1;
+            }
+            p{
+                position: absolute;
+                text-shadow: 0px 3px 5px #000000;
+                z-index: 0;
+                width: 100%;
+                @include transform_center();
+                opacity: 0;
+            }
+            &:hover{
+                background: url(../images/btn-hover-one-year.png) no-repeat center;
+                span{
+                    background-image: linear-gradient(to top,#8a3e12 44%,#bc5418 93%);
+                }
+            }
+        }
+    }
+}
+.event-title{
+    padding-top: 27px;
+    padding-bottom: 10px;
+    text-align: center;
+    .event-title-text{
+        text-shadow: 4px 0 13px #00afff;
+        padding-top: 20px;
+        font-style: italic;
+        font-size: 33px;
+        font-weight: bold;
+        letter-spacing: 0.2px;
+        margin: 0 15px;
+        line-height: 40px;
+    }
+    img{
+        vertical-align: middle;
+    }
+    &.pt-86{
+        padding-top: 86px;
+    }
+}
+.event{
+    background: url(../images/bg-vongquay.jpg) no-repeat center;
+    padding-bottom: 30px;   
+    background-size: cover;
+    position: relative;
+    .login-fb{
+        font-size: 15px;
+        font-family: "utm_god";
+        position: relative;
+        z-index: 10;
+        font-weight: bold;
+        background: url(../images/login-fb.png) no-repeat;
+        width: 263px;
+        height: 56px;
+        display: inline-block;
+        margin-top: 50px;
+        @include height_center();
+        text-shadow: 0px 0px 4px rgba($color: #106f5c, $alpha: 1);
+        &:hover{
+            background: url(../images/hover-login-fb.png) no-repeat;
+        }
+    }
+    .introduce{
+        max-width: 780px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 128px auto 0;
+        height: 127px;
+        .introduce_title{
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 16.667%;
+            flex: 0 0 16.667%;
+            max-width: 16.667%;
+            background: #ffa239;
+            border-radius: 20px 0 0 20px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            h4{
+                font-size: 33px;
+                color: #fff9ea;
+                line-height: 37px;
+                font-style: italic;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                right: -36px;
+                border: solid transparent;
+                border-width: 18px;
+                border-left-color: #ffa239;
+            }
+        }
+        .introduce_content{
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 83.333%;
+            flex: 0 0 83.333%;
+            max-width: 83.333%;
+            background: #fff3d6;
+            border-radius: 0px 20px 20px 0px;
+            padding: 0px 15px 0 30px;
+            color: #702e0d;
+            font-family: "tahoma";
+            font-size: 15px;
+            letter-spacing: -0.1px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 20px;
+        }
+    }
+    .tuong{
+        text-align: center;
+        position: relative;
+        max-width: 840px;
+        margin: 34px auto 0;
+        #img1{
+            transition: 3s cubic-bezier(1, 0.1, 0.1, 1) 0s;
+            @include rotate(18deg);
+            margin-top: 5px;
+            margin-left: 7px;
+            width: 68.5%;
+        }
+        #img-clip{
+            position: absolute;
+            @include transform_center();
+            width: 100%;
+        }
+        #img2{
+            position: absolute;
+            @include transform_center();
+            margin-top: -34px;
+            cursor: pointer;
+            width: 22%;
+            margin-left: 3px;
+        }
+        #bg-quay{
+            position: absolute;
+            @include transform_center();
+            font-size: 30px;
+            color: #712f0d;
+            width: 167px;
+            line-height: 34px;
+            margin-left: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        #render1{
+            position: absolute;
+            color: #000;
+            font-size: 30px;
+        }
+    }
+    .event-btn{
+        background: url(../images/bt-event.png) no-repeat;
+        width: 148px;
+        height: 148px;
+        cursor: pointer;
+        @include height_center();
+        position: absolute;
+        @include transition(0.2s);
+        &:hover{
+            background: url(../images/hover-bt-event.png) no-repeat;
+            span{
+                background-image: linear-gradient(to top,#ffba00 0%,#ffffff 45%);
+            }
+        }
+        p{
+            font-size: 25px;
+            margin-top: -20px;
+            text-shadow: 0px 4px 1px rgba($color: #8a3e12, $alpha: 0.52);
+            opacity: 0.9;
+        }
+        span{
+            font-size: 25px;
+            margin-top: -10px;
+            position: absolute;
+            background-image: linear-gradient(to top,#30b5e8 0%,#ffffff 45%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &.event-btn1{
+            top: -10px;
+            right: 96px;
+        }
+        &.event-btn2{
+            top: 183px;
+            right: 0;
+        }
+        &.event-btn3{
+            top: 413px;
+            right: 0px;
+            & ~ .event-popup {
+                .bg-popup-event {
+                    padding: 60px 47px;
+                }
+            }
+        }
+        &.event-btn4{
+            top: 620px;
+            right: 96px;
+            & ~ .event-popup {
+                .history-event{
+                    font-family: "tahoma";
+                    font-size: 18px;
+                    color: #5e7482;
+                    width: 100%;
+                    text-align: center;
+                    th{
+                        text-align: center; 
+                        background: #5f80a1;
+                        color: #ffffff;
+                        padding: 12px 0px;
+                    }
+                    tr,th,td{
+                        border: 1px solid #5f80a1;
+                    }
+                    td{
+                        color: #364859;
+                        padding: 11px 0;
+                    }
+                }
+                .bg-popup-event {
+                    padding: 48px 88px;
+                }
+            }
+        }
+    }
+    .open-event-popup{
+        .event-popup{
+            top: 60%;
+        }
+    }
+    .event-popup{
+        max-width: 1050px;
+        width: 100%;
+        position: absolute;
+        z-index: 101;
+        @include transform_center();
+        z-index: 101;
+        @include transition(0.3s);
+        opacity: 0;
+        pointer-events: none;
+        &.active{
+            opacity: 1;
+            pointer-events: initial;
+        }
+        .bg-popup-event{
+            background: url(../images/bg-popup.jpg) no-repeat center;
+            background-size: cover;
+            padding: 60px;
+            position: relative;
+            border: 12px solid #3791dd;
+            z-index: 1;
+            
+            .bg-popup-event__title{
+                font-size: 25px;
+                background-image: linear-gradient(to top,#3473a9 0%,#53a4eb 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase;
+                font-style: italic;
+                font-size: 52px;
+                margin-top: -5px;
+                text-align: center;
+            }
+            p,li{
+                font-size: 23px;
+                color: #5e7482;
+                line-height: 40px;
+                font-family: "tahoma";
+            }
+        }
+        .img-event-popup{
+            position: absolute;
+            top: -300px;
+            left: 50%;
+            @include transformX(-50%);
+            max-width: 100%;
+        }
+    }
+    .popup-gift{
+        max-width: 390px;
+        width: 100%;
+        height: 350px;
+        background: url(../images/bg-popup.jpg) no-repeat;
+        background-position: -31px -90px;
+        position: fixed;
+        @include transform_center();
+        z-index: 101;
+        border: 12px solid #3791dd;
+        padding: 15px;
+        text-align: center;
+        opacity: 0;
+        @include transition(0.3s);
+        pointer-events: none;
+        &.active{
+            opacity: 1;
+            pointer-events: initial;
+        }
+        h4{
+            font-size: 25px;
+            background-image: linear-gradient(to top,#3473a9 0%,#53a4eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+        p{
+            font-size: 16px;
+            color: #3f3128;
+            font-family: "utm_god";
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .border-event{
+            // background: #3791dd;
+            border: 1px solid #3791dd;
+            background: rgba($color: #3791dd, $alpha: 0.15);
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+            img{
+                width: 60px;
+            }
+            .update{
+                width: 46px;
+                margin-top: -7px;
+            }
+        }
+        b{
+            color: #000000;
+            font-size: 16px;
+            font-family: "utm_god";
+        }
+        .event-exit{
+            border: 1px solid #3791dd;
+            background: rgba($color: #3791dd, $alpha: 0.1);
+            font-size: 16px;
+            color: #3791dd;
+            font-family: "utm_god";
+            border-radius: 100px;
+            padding: 2px 28px 8px;
+            flex-direction: column;
+            margin-top: 20px;
+            cursor: pointer;
+            @include transition(0.3s);
+            &:hover{
+                background: rgba($color: #3791dd, $alpha: 0.3);
+            }
+        }
+    }
+}
+
+.gift{
+    background: url(../images/bg-hopqua.png) no-repeat center;
+    padding-bottom: 61px;   
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-top: -60px;
+    width: 100%;
+    .img-gift{
+        margin-top: 88px;
+        max-width: 100%;
+    }
+    .gift-image{
+        width: fit-content;
+        margin: auto;
+    }
+    .bt-join{
+        height: 78px;
+        width: 231px;
+        background: url(../images/bt-join.png) no-repeat center;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 15px;
+        color: #720702;
+        font-style: italic;
+        text-shadow: 0px 2px 1px rgba($color: #ffffff, $alpha: 1);
+        position: absolute;
+        bottom: 34px;
+        left: 51%;
+        @include transformX(-50%);
+        &:hover{
+            background: url(../images/hover-bt-join.png) no-repeat center;
+        }
+    }
+}
+.event-vs{
+    background: url(../images/bg-vs.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    .bg-sk{
+        height: 67px;
+        font-size: 23px;
+        margin: 20px auto 0;
+        h3{
+            background-image: linear-gradient(to right, #794614 35%, rgba(#ba5e0a,0.8) 50%, #794614 70%);        
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-top: 10px;
+        }
+        &.bg-sk-ingame{
+            background: url(../images/sk-ingame.png) no-repeat center;
+            width: 263px;
+        }
+        &.bg-sk-fanpage{
+            background: url(../images/sk-congdong.png) no-repeat center;
+            width: 327px;
+            @include transformX(20px);
+            margin-bottom: 10px;
+        }
+    }
+    
+    .bg-full{
+        width: 227px;
+        margin: auto;
+        cursor: pointer;
+        height: 370px;
+        font-family: "utm_god";
+        font-weight: bold;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        p{
+            font-size: 15px;
+            top: 270px;
+            position: absolute;
+            line-height: 20px;
+            padding: 0 15px;
+            width: 220px;
+            span{
+                font-weight: 100;
+                font-family: "utm_god";
+            }
+        }
+    }
+    .bg-login{
+        background: url(../images/login-qua.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-login-qua.png) no-repeat center;
+            background-position-y: 2px;
+        }
+    }
+    .bg-top{
+        background: url(../images/duatop-img.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-duatop-img.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+    .bg-gift-bir{
+        background: url(../images/bg-hopquasinhnhat.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-bg-hopquasinhnhat.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+    .bg-card{
+        background: url(../images/img-tichnap.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-img-tichnap.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+    .bg-share{
+        background: url(../images/img-share.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-img-share.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+    .bg-fan{
+        background: url(../images/img-fancung.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-img-fancung.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+    .bg-wishes{
+        background: url(../images/bg-loichuc.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-bg-loichuc.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+    .bg-insert{
+        background: url(../images/bg-manhghep.png) no-repeat center;
+        &:hover{
+            background: url(../images/hover-bg-manhghep.png) no-repeat center;
+            background-position-y: 3px;
+        }
+    }
+}
+
+.event-fanpage{
+    background: url(../images/event-fanpage.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    height: 1065px;
+    text-align: center;
+    .img-title{
+        width: 100%;
+        padding-top: 33px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .bt-play{
+       img{
+            -webkit-animation: zoomIcon 2s infinite linear;
+            animation: zoomIcon 2s infinite linear;
+            cursor: pointer;
+            width: 10vw;
+            margin-top: 20px;
+       }
+        @keyframes zoomIcon{
+            0% {
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+            
+            50% {
+                -webkit-transform: scale(1.1, 1.1);
+                transform: scale(1.1, 1.1);
+            }
+            100% {
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+        }
+        
+    }
+    #video{
+        width: 50vw;
+        opacity: 0;
+        position: fixed;
+        @include transform_center();
+        z-index: -100;
+        @include transition(0.3s);
+        border: 10px solid #3791dd;
+        &.show{
+            opacity: 1;
+            z-index: 101;
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .one-year{
+        .one-year-img{
+            bottom: 140px;
+            padding: 15px;
+        }
+        .btn-one-year{
+            flex-wrap: wrap;
+            bottom: 30px;
+            a{
+                max-width: 50%;
+                flex: 0 0 50%;
+                margin-left: 0;
+                margin-right: 0;
+                -ms-flex: 0 0 50%;
+            }
+            .btn-one-year3{
+                margin-top: 20px;
+                left: 50%;
+                @include transformX(-50%);
+            }
+        }  
+    } 
+    .img-exit{
+        top: -75px;
+        right: 25px;
+    }
+    .event .tuong{
+        @include transformX(-50px);
+    }
+    .event-title img{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .event-fanpage .bt-play img{
+        width: 20vw;
+    }
+    .event-fanpage #video{
+        width: 70vw;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .event{
+        .tuong{
+            @include transformX(0px);
+            @include transformY(100px)
+        }
+        .login-fb{
+            margin: 42px auto 0;
+            max-width: 346px;
+            width: 100%;
+            height: 72px;
+            background-size: contain;
+            font-size: 19px;
+            &:hover{
+                background-size: contain;
+            }
+        }
+        .event-btns{
+            display: flex;
+            justify-content: center;
+            margin-top: 213px;
+            .open-event-popup{
+                padding: 0 15px;
+            }
+            .event-btn{
+                position: initial;
+            }
+        }
+        .introduce{
+            margin-top: 15px;
+        }
+    } 
+}
+@media only screen and (max-width: 990px) {
+    .col-md-4{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333%;
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .col-sm-6{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .one-year{
+        height: 1100px;
+        .one-year-img{
+            bottom: 255px;
+        }
+        .btn-one-year{
+            bottom: 20px;
+            a{
+                max-width: 100%;
+                flex: 0 0 100%;
+                -ms-flex: 0 0 100%;
+            }
+            .btn-one-year2{
+                margin-top: 20px;
+            }
+        }  
+    } 
+    .event .tuong #bg-quay{
+        font-size: 22px;
+        margin-top: -5px;
+        line-height: 24px;
+    }
+    .gift .bt-join{
+        opacity: 0;
+    }
+    .event-vs .bg-sk.bg-sk-fanpage{
+        margin-top: 70px;
+    }
+    .pb-43{
+        padding-bottom: 65px;
+    }
+    .event-title .event-title-text{
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .event .event-btns{
+        flex-wrap: wrap;;
+        .open-event-popup{
+            padding: 10px 15px;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .event-btn{
+            margin: auto;
+        }
+    }
+    .event .event-popup .bg-popup-event,.event .event-btn.event-btn3 ~ .event-popup .bg-popup-event{
+        padding: 60px 15px;
+    }
+    .event .event-btn.event-btn4 ~ .event-popup .bg-popup-event{
+        padding: 30px 15px
+    }
+    .event .event-btn.event-btn4 ~ .event-popup .history-event{
+        font-size: 14px;
+    }
+    .event .tuong{
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
+    .event .introduce .introduce_title{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 300px;
+        padding: 15px 15px;
+        border-radius: 0;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .event .introduce .introduce_content{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        border-radius: 20px;
+        padding: 15px 30px;
+    }
+    .event .introduce .introduce_title::before{
+        content: none;
+    }
+    .event .introduce{
+        height: 100% ;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .col-12{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .event .tuong #bg-quay{
+        font-size: 16px;
+        margin-top: 0px;
+        line-height: 20px;
+        width: 100px;
+    }
+    .event .tuong #img2{
+        margin-top: -22px;
+    }
+    .event-vs .bg-sk.bg-sk-fanpage{
+        @include transformY(0px);
+    }
+    .one-year .one-year-img{
+        bottom: 315px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .event .tuong #bg-quay{
+        font-size: 13px;
+        margin-top: 0px;
+        line-height: 16px;
+    }
+    .event .tuong #img2{
+        margin-top: -18px;
+    }
+    .one-year .btn-one-year a{
+        background-size: contain;
+        padding: 15px;
+        font-size: 20px;
+    }
+    .btn-one-year{
+        padding: 0 15px;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .event .event-btns .open-event-popup{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .event-vs .bg-sk.bg-sk-fanpage{
+        background-size: contain;
+        width: 270px;
+    }
+    .event-vs .bg-sk{
+        font-size: 20px;
+        h3{
+            padding-top: 13px;
+        }
+    }
+}
+@media only screen and (max-width: 320px) {
+    .event .tuong #bg-quay{
+        font-size: 10px;
+        margin-top: 0px;
+        line-height: 16px;
+        width: 60px;
+    }
+    .event .tuong #img2{
+        margin-top: -15px;
+    }
+}
